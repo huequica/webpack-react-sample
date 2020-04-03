@@ -6,7 +6,7 @@ const dist = path.resolve(__dirname, 'dist'); // `dist` ディレクトリのパ
 export default {
   mode: 'development',
   // エントリーポイントのファイル
-  entry: `${src}/index.js`,
+  entry: `${src}/index.jsx`,
 
   output: {
     path: dist,
@@ -24,7 +24,7 @@ export default {
   },
 
   resolve: {
-    extentions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx']
   },
 
   plugins: []
