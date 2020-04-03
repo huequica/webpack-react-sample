@@ -1,4 +1,5 @@
 import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const src = path.resolve(__dirname, 'src');   // `src` ディレクトリのパス
 const dist = path.resolve(__dirname, 'dist'); // `dist` ディレクトリのパス
@@ -27,5 +28,10 @@ export default {
     extensions: ['.js', '.jsx']
   },
 
-  plugins: []
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: `${src}/index.html`,
+      filename: 'index.html'
+    })
+  ]
 }
